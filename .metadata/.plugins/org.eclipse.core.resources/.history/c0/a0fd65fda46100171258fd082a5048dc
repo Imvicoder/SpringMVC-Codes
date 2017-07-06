@@ -1,0 +1,33 @@
+package com.vikas.springtest;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+@RequestMapping("/greet")
+public class HelloController {
+@RequestMapping("/welcome")
+public ModelAndView helloworld(){
+	ModelAndView model=new ModelAndView("HelloPage");
+	model.addObject("msg","Hello World");
+	return model;
+}
+@RequestMapping("/hi")
+public ModelAndView hiworld(){
+	ModelAndView model=new ModelAndView("HelloPage");
+	model.addObject("msg","hi world");
+	return model;
+}
+
+//Using Path Variable Annotation to pass variables in url and using the value of these values in our
+//code as following
+// we can use more than one variables in url as following
+@RequestMapping("/{countryname}/username/{name}")
+public ModelAndView variabletest(@PathVariable("name") String uname,@PathVariable("countryname") String cname){
+	ModelAndView model=new ModelAndView("HelloPage");
+	model.addObject("msg","Hello "+uname+" Yoy are from "+cname);
+	return model;
+}
+
+}

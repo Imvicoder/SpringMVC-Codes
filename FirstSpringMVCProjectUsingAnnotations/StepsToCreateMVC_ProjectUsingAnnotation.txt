@@ -1,0 +1,13 @@
+Steps:-
+
+1)MOdify web.xml file to configure spring-dispatcher servlet:
+  write servlet name,servlet class,servlet mapping,URL Pattern
+  
+2)Write spring-dispatcher-servlet.xml:  
+  
+  For Annotation:-
+  
+  use :- <context:component-scan base-package="PACKAGE NAME CONATINING CONTROLLER CLASSES " 
+   :-> This automatically detects all classes having annotations @controller placed
+    in given package 
+     

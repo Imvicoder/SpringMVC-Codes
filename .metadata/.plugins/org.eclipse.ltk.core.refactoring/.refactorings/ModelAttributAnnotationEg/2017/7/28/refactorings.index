@@ -1,0 +1,4 @@
+1499583848847	Rename resource 'admissionForm.jsp'
+1499583857526	Rename resource 'successmsg.jsp'
+1499584348036	Move 'AdmissionForm.jsp' to 'WEB-INF'
+1499584350766	Move 'Successmsg.jsp' to 'WEB-INF'

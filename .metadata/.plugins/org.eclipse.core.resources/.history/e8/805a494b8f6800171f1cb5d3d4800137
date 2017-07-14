@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">  
+<hibernate-configuration>
+  <session-factory>
+    <!-- Database connection settings -->
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:8089/hibernateTutorials</property>
+    <property name="connection.username">rot</property>
+    <property name="connection.password"></property>
+    <!-- SQL dialect -->
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    <!-- Drop the existing table and create new one -->
+    <property name="hbm2ddl.auto">update</property>
+    <!-- Mention here all the model classes along with their package names -->
+    <mapping class="com.vikas.hibernate.Student_Info"/>
+  
+  </session-factory>
+</hibernate-configuration>

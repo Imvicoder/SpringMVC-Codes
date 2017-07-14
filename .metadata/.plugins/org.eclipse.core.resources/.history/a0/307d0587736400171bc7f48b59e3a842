@@ -1,0 +1,21 @@
+package com.vikas.modelAttributeAnnotationeg;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+
+public class HelloController {
+@RequestMapping(value="/admissionform",method=RequestMethod.GET)
+public ModelAndView fillform(){
+	ModelAndView model=new ModelAndView("admissionForm");
+	return model;
+}
+@RequestMapping(value="/admissionsuccess",method=RequestMethod.POST)
+public ModelAndView success(){
+	ModelAndView model=new ModelAndView("successmsg");
+	
+}
+
+
+}

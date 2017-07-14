@@ -1,0 +1,5 @@
+127.0.0.1 - - [07/Jul/2017:23:21:53 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:23:21:56 +0530] "GET /FormHandlingUsingRequestParamAnnotation/ HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:23:21:56 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:23:21:59 +0530] "GET /FormHandlingUsingRequestParamAnnotation/admissionform.html HTTP/1.1" 200 564
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:23:22:10 +0530] "POST /FormHandlingUsingRequestParamAnnotation/submitform.html HTTP/1.1" 200 242

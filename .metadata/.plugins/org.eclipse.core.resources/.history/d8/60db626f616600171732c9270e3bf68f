@@ -1,0 +1,67 @@
+package com.vikas.modelAttributeAnnotationeg;
+
+import java.util.ArrayList;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+// @Controller
+public class STudentInfoRESTApiController {
+	// to create GET type REST API
+//	@ResponseBody
+	@RequestMapping(value = "/getstudentslist", method = RequestMethod.GET)
+	public ArrayList<Student> getstudents() {
+		ArrayList<Student> list = new ArrayList<>();
+		Student s1 = new Student();
+		s1.setName("Vikas");
+		Student s2 = new Student();
+		s2.setName("Rahul");
+		Student s3 = new Student();
+		s3.setName("Rakhi");
+		Student s4 = new Student();
+		s4.setName("Yash");
+		Student s5 = new Student();
+		s5.setName("sonu");
+
+		list.add(s1);
+		list.add(s2);
+		list.add(s3);
+		list.add(s4);
+		list.add(s5);
+		return list;
+
+	}
+
+	// Display information for a particular student
+	// @ResponseBody
+	@RequestMapping(value = "/getStudentInfo/{name}", method = RequestMethod.GET)
+	public Student getStudentdetail(@PathVariable("name") String Studentname) {
+		Student st = new Student();
+		st.setName(Studentname);
+		st.setHobby("music");
+		return st;
+	}
+	//update record particular student
+	@RequestMapping(value="/getstudentslist/{name}",method=RequestMethod.PUT)
+	public boolean updateStudentRecord(@PathVariable("name") String studentname,@RequestBody Student student){
+		System.out.println("Student name:->"+studentname);
+		System.out.println("Student name:->"+student.getName()+"\nStudent Hobby:->"+student.getHobby());
+		return true;
+	}
+	//Post record of a student
+	
+	@RequestMapping(value="/poststudentdetails",method=RequestMethod.POST )
+	public ResponseEntity<Boolean> postStudent(@RequestBody Student student){
+		System.out.println("Student Name:->"+student.getName()+"\nStudent Hobby:->"+student.getHobby());
+		return new ResponseEntity<Boolean>(true,HttpStatus.OK);
+	}
+}

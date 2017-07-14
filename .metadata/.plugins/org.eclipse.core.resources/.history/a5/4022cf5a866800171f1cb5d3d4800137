@@ -1,0 +1,13 @@
+package com.vikas.hibernate;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.*;
+
+public class Main {
+public static void main(String [] args){
+	Student_Info student=new Student_Info();
+	student.setName("Vikas");
+	student.setRollNo(23);
+	SessionFactory factory=new AnnotationConfiguration
+}
+}

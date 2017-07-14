@@ -1,0 +1,19 @@
+
+
+import java.util.*;
+import org.springframework.web.portlet.handler.HandlerInterceptorAdapter;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+//if we need to to stop website for maintainenace purposes then we need to use Interceptor concept
+public class DayOfWeekBasedAccessInterceptor extends HandlerInterceptorAdapter{
+protected boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+Calendar cal=Calendar.getInstance();
+int dayOfWeek=cal.get(cal.DAY_OF_WEEK);
+if(dayOfWeek==3){
+	response.getWriter().write("This website is under maintenace on Tuesday. Please visit us on anyother day!!");
+	return false;
+}
+return true;
+}
+}

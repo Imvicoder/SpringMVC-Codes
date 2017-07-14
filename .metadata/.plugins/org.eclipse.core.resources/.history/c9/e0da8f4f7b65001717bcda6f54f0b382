@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Admission Form</title>
+</head>
+<body>
+<h1>${commonmsg}</h1>
+<form action="/ModelAttributAnnotationEg/admissionsuccess.html" method="post">
+<p>Name: <input type="text" name="name"/></p>
+<p>Hobby:<input type="text" name="hobby"/></p>
+<p>Contact No: <input type="text" name="mobileno"/></p>
+<p>Date Of Birth:<input type="text" name="dob"/></p>
+<p>Skill Set:<select name="skills" multiple="multiple">
+<option>"Java"</option>
+<option>"C"</option>
+<option>"Python"</option>
+<option>"Hadoop"</option>
+<option>"php"</option>
+<option>"Asp.net"</option>
+</select></p>
+<input type="submit" value= "submit" >
+</form>
+</body>
+</html>
